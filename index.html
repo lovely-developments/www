@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lovely Developments - Test Run Canning & Bottling Services</title>
@@ -94,18 +94,43 @@
             color: #0e6e17;
             text-decoration: none;
         }
+        .message {
+            display: none; /* Hidden by default */
+            background-color: #dff0d8; /* Light green background */
+            color: #3c763d; /* Dark green text */
+            border: 1px solid #d6e9c6;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: center;
+        }
     </style>
 
-<script type="text/javascript">
 
-    alert("Your Form Has Been Submitted.")
-
-</script>
 </head>
 <body>
+        <div id="thank-you-message" class="message">
+            Thank you for contacting us! We'll get back to you as soon as possible!
+        </div>
+    <script>
+        // Run this code after the DOM content is fully loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get the URL query parameters
+            const queryParams = new URLSearchParams(window.location.search);
+
+            // Check if the 's' parameter exists and is equal to '1'
+            if (queryParams.get('s') === '1') {
+                // Show the thank-you message
+                document.getElementById('thank-you-message').style.display = 'block';
+            }
+        });
+    </script>
+
     <div class="banner">
         <img src="row-of-soda-cans.jpg" alt="Row of soda cans">
     </div>
+
     <header>
     <div class="logo">
 <img src="LOGO-BW-SM.png" alt="LD Logo">
@@ -114,6 +139,7 @@
 </div>
     </header>
     <section>
+
         <h2>We Can Help You Get Your Product Out There</h2>
         <p>At Lovely Developments, we specialize in helping startup drinks companies take their products to the next level. Our services include:</p>
         <ul>
@@ -144,7 +170,7 @@
             <textarea id="message" name="message" rows="5" required></textarea>
             
             <button type="submit">Send Message</button>
-            <input type="hidden" name="_next" value="https://lovely-developments.github.io/www/">
+            <input type="hidden" name="_next" value="https://lovely-developments.github.io/www/?s=1">
         </form>
         <div class="image-container">
             <img src="salsa-logo.png" alt="SALSA APPROVED">
