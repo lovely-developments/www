@@ -94,24 +94,26 @@
             color: #0e6e17;
             text-decoration: none;
         }
-        .message {
-            display: none; /* Hidden by default */
-            background-color: #dff0d8; /* Light green background */
-            color: #3c763d; /* Dark green text */
-            border: 1px solid #d6e9c6;
-            border-radius: 5px;
-            padding: 15px;
-            margin: 20px auto;
-            max-width: 800px;
-            text-align: center;
-        }
+.message {
+    display: none;
+    background-color: #dff0d8;
+    color: #3c763d;
+    border: 1px solid #d6e9c6;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 1s ease-out; /* Smooth fade-out */
+}
     </style>
 
 
 </head>
 <body>
         <div id="thank-you-message" class="message">
-            Thank you for contacting us! We'll get back to you as soon as possible!
+            Thank you for your submission!
         </div>
     <script>
         // Run this code after the DOM content is fully loaded
@@ -122,7 +124,16 @@
             // Check if the 's' parameter exists and is equal to '1'
             if (queryParams.get('s') === '1') {
                 // Show the thank-you message
-                document.getElementById('thank-you-message').style.display = 'block';
+                const messageDiv = document.getElementById('thank-you-message');
+                messageDiv.style.display = 'block';
+
+                // Hide the message after 1 minute (60,000 milliseconds)
+               setTimeout(() => {
+    messageDiv.style.opacity = '0'; // Start fade-out
+    setTimeout(() => {
+        messageDiv.style.display = 'none'; // Hide completely after fade-out
+    }, 1000); // Match the duration of the CSS transition
+}, 60000);
             }
         });
     </script>
