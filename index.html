@@ -95,15 +95,20 @@
             text-decoration: none;
         }
 .message {
-    display: none;
-    background-color: #dff0d8;
-    color: #3c763d;
+    display: none; /* Hidden by default */
+    background-color: #dff0d8; /* Light green background */
+    color: #3c763d; /* Dark green text */
     border: 1px solid #d6e9c6;
     border-radius: 5px;
-    padding: 15px;
-    margin: 20px auto;
-    max-width: 800px;
+    padding: 25px;
+    max-width: 600px;
     text-align: center;
+    position: fixed; /* Fixed position to center it */
+    top: 50%; /* Move to the middle of the page vertically */
+    left: 50%; /* Move to the middle of the page horizontally */
+    transform: translate(-50%, -50%); /* Offset to perfectly center */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    z-index: 1000; /* Ensure it's above other content */
     opacity: 1;
     transition: opacity 1s ease-out; /* Smooth fade-out */
 }
@@ -113,7 +118,7 @@
 </head>
 <body>
         <div id="thank-you-message" class="message">
-            Thank you for your submission!
+            <strong>Thank you for your message!</strong><p>We will get back to you as soon as possible.
         </div>
     <script>
         // Run this code after the DOM content is fully loaded
@@ -128,12 +133,12 @@
                 messageDiv.style.display = 'block';
 
                 // Hide the message after 1 minute (60,000 milliseconds)
-               setTimeout(() => {
+setTimeout(() => {
     messageDiv.style.opacity = '0'; // Start fade-out
     setTimeout(() => {
         messageDiv.style.display = 'none'; // Hide completely after fade-out
     }, 1000); // Match the duration of the CSS transition
-}, 60000);
+}, 20000);
             }
         });
     </script>
