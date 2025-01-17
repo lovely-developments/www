@@ -12,52 +12,109 @@
             background-color: #f9f9f9;
             color: #333;
         }
+
         header {
             background-color: #4CAF50;
             color: white;
             text-align: center;
             padding: 20px;
         }
+
         section {
             padding: 20px;
             max-width: 900px;
             margin: auto;
             line-height: 1.6;
         }
+
         h1, h2 {
             color: #4CAF50;
         }
+
         ul {
             list-style-type: disc;
             margin-left: 20px;
         }
+
         .contact {
             background-color: #f1f1f1;
             padding: 20px;
             border-radius: 5px;
             margin-top: 20px;
         }
+
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
         footer {
             text-align: center;
             background-color: #333;
             color: white;
-            padding: 10px 0;
+            padding: 20px 0;
             margin-top: 20px;
+        }
+
+        /* Full-Width Image at the Top */
+        .top-banner img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Thank You Pop-up */
+        #thank-you-popup {
+            display: none;
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            font-size: 16px;
         }
     </style>
 </head>
+
 <body>
 
+    <!-- Thank You Pop-up -->
+    <div id="thank-you-popup">Thank you for your submission! We'll be in touch soon.</div>
+
+    <!-- Full-Width Banner Image -->
+    <div class="top-banner">
+        <img src="row-of-soda-cans.jpg" alt="Row of soda cans">
+    </div>
+
+    <!-- Header -->
     <header>
         <h1>Lovely Developments</h1>
         <p>Helping Drinks Brands Perfect Their Products</p>
     </header>
 
+    <!-- Main Content -->
     <section>
         <h2>Our Expertise</h2>
         <p>
-            At Lovely Developments, we specialise in helping drinks brands perfect their products. 
-            Whether you are a start-up or an established brand exploring new markets, we can turn a good idea into a great drink.
+            At Lovely Developments, we specialise in helping drinks brands perfect their products. Whether you are a start-up or an established brand exploring new markets, we can turn a good idea into a great drink.
         </p>
 
         <h2>Our Services</h2>
@@ -88,36 +145,59 @@
 
         <h2>About Us</h2>
         <p>
-            We are a SALSA-approved drinks producer with 17 years of experience. Our team has won multiple Great Taste 
-            and other awards for the drinks we have developed. We strive to offer a friendly, approachable service tailored 
-            to your needs and budget.
+            We are a SALSA-approved drinks producer with 17 years of experience. Our team has won multiple Great Taste and other awards for the drinks we have developed. We strive to offer a friendly, approachable service tailored to your needs and budget.
         </p>
 
         <p>
-            Whether you are launching your first drink or refining your existing range, we're here to support you. 
-            Fill out the form below to find out more and arrange a free discovery call.
+            Whether you are launching your first drink or refining your existing range, we're here to support you. Fill out the form below to find out more and arrange a free discovery call.
         </p>
 
+        <!-- Contact Form -->
         <div class="contact">
             <h2>Contact Us</h2>
-            <form action="https://formsubmit.co/hello@lovelydevelopments.co.uk" method="POST">
+            <form action="https://formsubmit.co/980b7a78c69aedfefb27eb8f722d5c03" method="POST">
                 <label for="name">Name</label><br>
                 <input type="text" id="name" name="name" required><br><br>
 
                 <label for="email">Email Address</label><br>
-                <input type="email" id="email" name="email" required><br><br>
+                <input type="email" id="email" name="email" placeholder="Email Address" required><br><br>
 
                 <label for="message">Message</label><br>
                 <textarea id="message" name="message" rows="5" required></textarea><br><br>
 
-                <button type="submit">Arrange Free Discovery Call</button>
+                <button type="submit">Send Message</button>
+
+                <input type="hidden" name="_next" value="https://lovelydevelopments.co.uk/?s=1">
+                <input type="hidden" name="_subject" value="New Website Enquiry!">
+                <input type="hidden" name="_replyto" value="email">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_autoresponse" value="Thank you for your enquiry. We will get back to you as soon as possible.">
             </form>
         </div>
     </section>
 
+    <!-- Footer with SALSA Logo -->
     <footer>
-        <p>&copy; 2025 Lovely Developments. All rights reserved.</p>
+        <p>&copy; 2024 Lovely Developments. All rights reserved.</p>
+        <div style="margin-top: 10px;">
+            <img src="salsa-logo.png" alt="SALSA APPROVED" style="width:150px; height:auto;">
+            <p style="font-size: 14px;">Proudly SALSA-Approved for Safe and Local Supplier Assurance.</p>
+        </div>
     </footer>
+
+    <!-- JavaScript for Pop-up -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const queryParams = new URLSearchParams(window.location.search);
+            if (queryParams.get('s') === '1') {
+                const popup = document.getElementById('thank-you-popup');
+                popup.style.display = 'block';
+                setTimeout(() => {
+                    popup.style.display = 'none';
+                }, 5000);
+            }
+        });
+    </script>
 
 </body>
 </html>
