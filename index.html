@@ -163,23 +163,33 @@
         <p>
             We are a SALSA-approved drinks producer with 17 years of experience. Our team has won multiple Great Taste and other awards for the drinks we have developed. We strive to offer a friendly, approachable service tailored to your needs and budget.
         </p>
+<!-- Contact Form -->
+<div class="contact">
+    <h2>Contact Us</h2>
+    <form action="https://formsubmit.co/980b7a78c69aedfefb27eb8f722d5c03" method="POST">
+        <label for="name">Name</label><br>
+        <input type="text" id="name" name="name" required><br><br>
 
-        <div class="contact">
-            <h2>Contact Us</h2>
-            <form action="https://formsubmit.co/980b7a78c69aedfefb27eb8f722d5c03" method="POST">
-                <label for="name">Name</label><br>
-                <input type="text" id="name" name="name" required><br><br>
+        <label for="email">Email Address</label><br>
+        <input type="email" id="email" name="email" placeholder="Email Address" required><br><br>
 
-                <label for="email">Email Address</label><br>
-                <input type="email" id="email" name="email" placeholder="Email Address" required><br><br>
+        <label for="phone">Phone Number</label><br>
+        <input type="tel" id="phone" name="phone" placeholder="Phone Number" required><br><br>
 
-                <label for="message">Message</label><br>
-                <textarea id="message" name="message" rows="5" required></textarea><br><br>
+        <label for="message">Message</label><br>
+        <textarea id="message" name="message" rows="5" required></textarea><br><br>
 
-                <button type="submit">Send Message</button>
-                <input type="hidden" name="_next" value="https://lovelydevelopments.co.uk/?s=1">
-            </form>
-        </div>
+        <button type="submit">Arrange a Free Discovery Call</button>
+
+        <!-- Customised hidden fields -->
+        <input type="hidden" name="_subject" value="New Enquiry from: {name} - {date}">
+        <input type="hidden" name="_replyto" value="email">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_autoresponse" value="Thanks for your message – we've received your enquiry and will be in touch to arrange your discovery call. Looking forward to speaking with you!">
+        <input type="hidden" name="_next" value="https://lovelydevelopments.co.uk/?s=1">
+    </form>
+</div>
+
     </section>
 
     <!-- Footer with SALSA Logo -->
