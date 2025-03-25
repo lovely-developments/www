@@ -21,7 +21,6 @@
     }
 
     header h1 {
-      color: white;
       font-size: 2.5em;
       margin: 0;
     }
@@ -122,9 +121,9 @@
   <section>
     <h2>Why Partner with Us?</h2>
     <ul>
-      <li> <strong>Award-Winning Expertise</strong> – 17 years of experience and multiple Great Taste awards.</li>
-      <li> <strong>Flexible Solutions</strong> – From recipe tweaking to full-scale production support.</li>
-      <li> <strong>SALSA-Accredited Facility</strong> – Ensuring quality and safety in every batch.</li>
+      <li><strong>Award-Winning Expertise</strong> – 17 years of experience and multiple Great Taste awards.</li>
+      <li><strong>Flexible Solutions</strong> – From recipe tweaking to full-scale production support.</li>
+      <li><strong>SALSA-Accredited Facility</strong> – Ensuring quality and safety in every batch.</li>
     </ul>
 
     <h2>Our Services: Designed to Help You Succeed</h2>
@@ -139,7 +138,6 @@
     <!-- Production Process Image -->
     <div style="text-align: center; margin: 30px 0;">
       <img src="mid-image.jpg" alt="Gin and Tonic at Lovely Developments" style="width: 100%; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);" />
-      <!--<p style="font-style: italic; color: #555;">Efficient and high-quality short test-run canning and bottling at our SALSA-accredited facility.</p>-->
     </div>
 
     <h2>Drinks We've Helped Bring to Life</h2>
@@ -177,7 +175,8 @@
         <label for="message">Message</label><br>
         <textarea id="message" name="message" rows="5" required></textarea><br><br>
 
-        <input type="hidden" id="custom-subject" name="_subject" value="">
+        <!-- Fixed subject line -->
+        <input type="hidden" name="_subject" value="New Website Enquiry">
         <input type="hidden" name="_replyto" value="email">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_autoresponse" value="Thanks for your message – we've received your enquiry and will be in touch to arrange your discovery call. Looking forward to speaking with you!">
@@ -188,7 +187,7 @@
     </div>
   </section>
 
-  <!-- Footer with SALSA Logo -->
+  <!-- Footer -->
   <footer>
     <p>&copy; 2024 Lovely Developments. All rights reserved.</p>
     <div style="margin-top: 10px;">
@@ -197,7 +196,7 @@
     </div>
   </footer>
 
-  <!-- JavaScript for Thank You Pop-up -->
+  <!-- Thank You Pop-up -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const queryParams = new URLSearchParams(window.location.search);
@@ -208,23 +207,6 @@
           popup.style.display = "none";
         }, 5000);
       }
-
-      // Add dynamic subject line before form submission
-      const form = document.querySelector("form");
-      const nameField = document.getElementById("name");
-      const subjectField = document.getElementById("custom-subject");
-
-form.addEventListener("submit", function (e) {
-  e.preventDefault(); // Stop the form from auto-submitting
-
-  const name = nameField.value.trim();
-  const today = new Date();
-  const formattedDate = today.toISOString().split("T")[0];
-  subjectField.value = `New Enquiry from: ${name} – ${formattedDate}`;
-
-  form.submit(); // Now manually submit after setting the subject
-});
-
     });
   </script>
 
