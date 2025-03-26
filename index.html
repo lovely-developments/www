@@ -210,6 +210,19 @@
       }
     });
   </script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("form");
+    const nameField = document.getElementById("name");
+    const subjectField = document.getElementById("custom-subject");
 
+    form.addEventListener("submit", function (e) {
+      const name = nameField.value.trim() || "New Enquiry";
+      const today = new Date();
+      const formattedDate = today.toISOString().split("T")[0];
+      subjectField.value = `New Enquiry from: ${name} – ${formattedDate}`;
+    });
+  });
+</script>
 </body>
 </html>
