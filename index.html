@@ -213,12 +213,16 @@
       const nameField = document.getElementById("name");
       const subjectField = document.getElementById("custom-subject");
 
-      form.addEventListener("submit", function () {
-        const name = nameField.value.trim();
-        const today = new Date();
-        const formattedDate = today.toISOString().split("T")[0];
-        subjectField.value = New Enquiry from: ${name} – ${formattedDate};
-      });
+form.addEventListener("submit", function (e) {
+  e.preventDefault(); // Stop the form from auto-submitting
+
+  const name = nameField.value.trim();
+  const today = new Date();
+  const formattedDate = today.toISOString().split("T")[0];
+  subjectField.value = `New Enquiry from: ${name} – ${formattedDate}`;
+
+  form.submit(); // Now manually submit after setting the subject
+});
     });
   </script>
 
