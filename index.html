@@ -197,6 +197,7 @@
     </div>
   </footer>
 
+  <!-- Thank You Pop-up -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const queryParams = new URLSearchParams(window.location.search);
@@ -207,22 +208,6 @@
           popup.style.display = "none";
         }, 5000);
       }
-
-      // Add dynamic subject line before form submission
-      const form = document.querySelector("form");
-      const nameField = document.getElementById("name");
-      const subjectField = document.getElementById("custom-subject");
-
-form.addEventListener("submit", function (e) {
-  e.preventDefault(); // Stop the form from auto-submitting
-
-  const name = nameField.value.trim();
-  const today = new Date();
-  const formattedDate = today.toISOString().split("T")[0];
-  subjectField.value = `New Enquiry from: ${name} – ${formattedDate}`;
-
-  form.submit(); // Now manually submit after setting the subject
-});
     });
   </script>
 
