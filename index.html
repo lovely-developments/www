@@ -1,106 +1,365 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="UTF-8" />
-  <!-- Meta Description -->
-<meta name="description" content="Lovely Developments helps drinks brands create, test, and scale beverages with expert recipe development, short-run canning and bottling, and regulatory support. Based near Bristol.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!-- Meta Keywords -->
-<meta name="keywords" content="short run canning, small batch bottling, beverage product development, drink recipe tweaking, drinks testing UK, SALSA accredited drinks, RTD drinks development, UKAS microbiology testing, drinks innovation, functional beverage consultant">
+  <title>Lovely Developments | Drink Development, Short-Run Production & Technical Support</title>
+  <meta name="description" content="Lovely Developments helps drinks brands develop, refine, test and produce commercially viable beverages, with short-run canning and bottling, ingredient sourcing, compliance support and lab testing near Bristol." />
+  <meta name="keywords" content="drink development UK, beverage product development, short run canning, small batch bottling, drink recipe development, SALSA approved drinks production, RTD drink development, functional beverage development, botanical drinks, lab testing drinks UK, drinks compliance UK" />
+  <link rel="canonical" href="https://lovelydevelopments.co.uk/" />
 
-<!-- Open Graph (for social sharing) -->
-<meta property="og:title" content="Lovely Developments | Expert Beverage Development & Small Batch Canning">
-<meta property="og:description" content="We help drinks brands launch and improve beverages with small-batch production, expert formulation, and compliance support.">
-<meta property="og:image" content="https://lovelydevelopments.co.uk/top-image.jpg"> <!-- Replace with your actual image URL if different -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://lovelydevelopments.co.uk">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Lovely Developments | Drink Development & Short-Run Production" />
+  <meta property="og:description" content="Recipe development, ingredient sourcing, short-run canning and bottling, compliance support and lab testing for drinks brands." />
+  <meta property="og:image" content="https://lovelydevelopments.co.uk/top-image.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lovelydevelopments.co.uk/" />
 
-<!-- Twitter Card (optional) -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Lovely Developments | Your Partner in Beverage Development">
-<meta name="twitter:description" content="Short-run canning and bottling for innovative drinks. Get your product tested, perfected, and production-ready.">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Lovely Developments | Drink Development & Short-Run Production" />
+  <meta name="twitter:description" content="Helping drinks brands create, refine, test and produce commercially viable beverages near Bristol." />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lovely Developments | Turning Ideas Into Award-Winning Drinks</title>
   <style>
+    :root {
+      --green: #3f8f4f;
+      --green-dark: #2f6f3d;
+      --green-soft: #eaf5ed;
+      --cream: #fbfaf6;
+      --ink: #263128;
+      --muted: #5d695f;
+      --line: #dfe7e1;
+      --white: #ffffff;
+      --shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+      --radius: 18px;
+      --max-width: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-
-    header {
-      background-color: #4CAF50;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-
-    header h1 {
-      font-size: 2.5em;
-      margin: 0;
-    }
-
-    header p {
-      font-size: 1.2em;
-      margin-top: 10px;
-    }
-
-    section {
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--cream);
+      color: var(--ink);
       line-height: 1.6;
     }
 
-    h2 {
-      color: #4CAF50;
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
     }
 
-    ul {
-      list-style-type: disc;
-      margin-left: 20px;
+    a {
+      color: var(--green-dark);
     }
 
-    .contact {
-      background-color: #f1f1f1;
-      padding: 20px;
-      border-radius: 5px;
-      margin-top: 20px;
+    .container {
+      width: min(var(--max-width), calc(100% - 40px));
+      margin: 0 auto;
     }
 
-    input, textarea, button {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-    }
-
-    button {
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #45a049;
-    }
-
-    footer {
-      text-align: center;
-      background-color: #333;
-      color: white;
-      padding: 20px 0;
-      margin-top: 20px;
+    .top-banner {
+      max-height: 360px;
+      overflow: hidden;
+      background: #d7e5d9;
     }
 
     .top-banner img {
       width: 100%;
-      height: auto;
+      object-fit: cover;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--green-dark), var(--green));
+      color: var(--white);
+      padding: 64px 0;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.4fr 0.8fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.78rem;
+      font-weight: 700;
+      margin: 0 0 14px;
+      opacity: 0.9;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.15;
+      margin-top: 0;
+    }
+
+    h1 {
+      font-size: clamp(2.3rem, 5vw, 4.4rem);
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      font-size: 1.22rem;
+      max-width: 760px;
+      margin: 0 0 24px;
+    }
+
+    .hero-card {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.26);
+      border-radius: var(--radius);
+      padding: 24px;
+      backdrop-filter: blur(4px);
+    }
+
+    .hero-card strong {
+      display: block;
+      font-size: 1.05rem;
+      margin-bottom: 8px;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .button {
+      display: inline-block;
+      text-decoration: none;
+      padding: 13px 20px;
+      border-radius: 999px;
+      font-weight: 700;
+      border: 2px solid transparent;
+    }
+
+    .button.primary {
+      background: var(--white);
+      color: var(--green-dark);
+    }
+
+    .button.secondary {
+      color: var(--white);
+      border-color: rgba(255,255,255,0.7);
+    }
+
+    section {
+      padding: 62px 0;
+    }
+
+    section.compact {
+      padding: 38px 0;
+    }
+
+    h2 {
+      color: var(--green-dark);
+      font-size: clamp(1.9rem, 3vw, 2.6rem);
+      margin-bottom: 18px;
+    }
+
+    h3 {
+      color: var(--ink);
+      font-size: 1.22rem;
+      margin-bottom: 10px;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      font-size: 1.08rem;
+      max-width: 840px;
+      margin-bottom: 32px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      align-items: start;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+    }
+
+    .card p:last-child, .card ul:last-child {
+      margin-bottom: 0;
+    }
+
+    .highlight {
+      background: var(--green-soft);
+      border: 1px solid #cbe2d0;
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .highlight h2, .highlight h3 {
+      color: var(--green-dark);
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .tick-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    .tick-list li {
+      position: relative;
+      padding-left: 30px;
+    }
+
+    .tick-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--green-dark);
+      font-weight: 800;
+    }
+
+    .image-panel {
+      margin-top: 12px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--line);
+    }
+
+    .process {
+      counter-reset: step;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .step {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 22px;
+      position: relative;
+    }
+
+    .step::before {
+      counter-increment: step;
+      content: counter(step);
+      display: inline-grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      background: var(--green);
+      color: var(--white);
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .contact {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    label {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    input, textarea, select, button {
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #c8d2cb;
+      font: inherit;
+    }
+
+    input, textarea, select {
+      background: #fff;
+      margin-bottom: 16px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 130px;
+    }
+
+    button {
+      background: var(--green);
+      color: var(--white);
+      border: none;
+      cursor: pointer;
+      font-weight: 700;
+      padding: 14px 18px;
+    }
+
+    button:hover {
+      background: var(--green-dark);
+    }
+
+    .contact-details {
+      background: var(--green-soft);
+      border-radius: var(--radius);
+      padding: 24px;
+      border: 1px solid #cbe2d0;
+    }
+
+    footer {
+      background: #243026;
+      color: var(--white);
+      padding: 34px 0;
+      margin-top: 40px;
+    }
+
+    footer .footer-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .salsa-block {
+      text-align: right;
+    }
+
+    .salsa-block img {
+      width: 150px;
+      margin-left: auto;
+      margin-bottom: 8px;
+    }
+
+    .small {
+      font-size: 0.9rem;
+      opacity: 0.85;
     }
 
     #thank-you-popup {
@@ -109,118 +368,345 @@
       top: 20px;
       left: 50%;
       transform: translateX(-50%);
-      background-color: #4CAF50;
+      background-color: var(--green);
       color: white;
       padding: 15px 25px;
-      border-radius: 5px;
+      border-radius: 999px;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
       z-index: 1000;
       font-size: 16px;
+      max-width: calc(100% - 30px);
+      text-align: center;
+    }
+
+    @media (max-width: 860px) {
+      .hero, .grid-2, .grid-3, .process, footer .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        padding: 44px 0;
+      }
+
+      section {
+        padding: 44px 0;
+      }
+
+      .salsa-block {
+        text-align: left;
+      }
+
+      .salsa-block img {
+        margin-left: 0;
+      }
     }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Lovely Developments LTD",
+    "url": "https://lovelydevelopments.co.uk/",
+    "email": "hello@lovelydevelopments.co.uk",
+    "telephone": "+447542517135",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "The Old Sawmill, Home Farm, Barrow Court Lane",
+      "addressLocality": "Bristol",
+      "postalCode": "BS48 3RW",
+      "addressCountry": "GB"
+    },
+    "description": "Drink development, recipe refinement, short-run production, ingredient sourcing, compliance support and lab testing for beverage brands."
+  }
+  </script>
 </head>
 <body>
 
-  <!-- Thank You Pop-up -->
-  <div id="thank-you-popup">Thank you for your submission! We'll be in touch soon.</div>
+  <div id="thank-you-popup">Thank you for your enquiry. We’ll be in touch soon.</div>
 
-  <!-- Banner Image -->
   <div class="top-banner">
-    <img src="top-image.jpg" alt="Row of soda cans" />
+    <img src="top-image.jpg" alt="A row of finished drinks cans produced by Lovely Developments" />
   </div>
 
-  <!-- Header -->
   <header>
-    <h1>Lovely Developments</h1>
-    <p>Turning Ideas Into Award-Winning Drinks</p>
+    <div class="container hero">
+      <div>
+        <p class="eyebrow">Drink development · Short-run production · Technical support</p>
+        <h1>Turning drink ideas into commercially viable products.</h1>
+        <p>
+          Lovely Developments helps drinks brands create, refine, test and produce high-quality beverages, from first recipe work through to short-run canning, bottling, compliance and lab testing.
+        </p>
+        <div class="button-row">
+          <a class="button primary" href="#contact">Arrange a discovery call</a>
+          <a class="button secondary" href="#services">See what we can help with</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <strong>Based near Bristol</strong>
+        <p>SALSA-approved facility supporting drink start-ups, established brands, agencies and companies needing fast, practical product development.</p>
+        <strong>Useful when you need:</strong>
+        <p>Samples for buyers, event stock, retailer trials, recipe refinement, small launch runs or technical support before scaling up.</p>
+      </div>
+    </div>
   </header>
 
-  <!-- Main Content -->
-  <section>
-    <h2>Why Partner with Us?</h2>
-    <ul>
-      <li><strong>Award-Winning Expertise</strong> – 17 years of experience and multiple Great Taste awards.</li>
-      <li><strong>Flexible Solutions</strong> – From recipe tweaking to full-scale production support.</li>
-      <li><strong>SALSA-Accredited Facility</strong> – Ensuring quality and safety in every batch.</li>
-    </ul>
+  <main>
+    <section class="compact">
+      <div class="container grid-3">
+        <div class="card">
+          <h3>Award-winning experience</h3>
+          <p>Over 17 years in the drinks industry, with experience developing and producing Great Taste award-winning products.</p>
+        </div>
+        <div class="card">
+          <h3>Commercially focused</h3>
+          <p>We develop recipes with production, ingredient supply, cost, shelf life, stability and packaging format in mind.</p>
+        </div>
+        <div class="card">
+          <h3>Flexible support</h3>
+          <p>We can help with one stage of a project or support the whole journey from concept to finished product.</p>
+        </div>
+      </div>
+    </section>
 
-    <h2>Our Services: Designed to Help You Succeed</h2>
-    <ul>
-      <li><strong>Refine Your Recipe:</strong> We fine-tune your product to perfection or simplify it for commercial scalability.</li>
-      <li><strong>Scale with Confidence:</strong> We create commercial recipes and source ingredients from accredited suppliers.</li>
-      <li><strong>Test-Run Production:</strong> Short canning and bottling runs at our SALSA-accredited facility near Bristol.</li>
-      <li><strong>Compliance & Safety:</strong> We ensure your product meets all food and drink regulations.</li>
-      <li><strong>Data You Can Trust:</strong> Receive technical data sheets, microbiology reports, and shelf-life testing from a UKAS-accredited lab.</li>
-    </ul>
+    <section id="services">
+      <div class="container">
+        <h2>What we can help with</h2>
+        <p class="section-intro">
+          Whether you already have a recipe or only an early idea, we can help turn it into a drink that tastes good, can be made reliably and is realistic to produce.
+        </p>
 
-    <!-- Production Process Image -->
-    <div style="text-align: left; margin: 30px 0;">
-      <img src="mid-image.jpg" alt="Gin and Tonic at Lovely Developments" style="width: 98%; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);" />
-    </div>
+        <div class="grid-3">
+          <div class="card">
+            <h3>Recipe development</h3>
+            <ul class="tick-list">
+              <li>New drink recipes from scratch</li>
+              <li>Flavour, sweetness, acidity and mouthfeel balancing</li>
+              <li>Low-sugar and sugar-free development</li>
+              <li>Functional, botanical and premium soft drinks</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Recipe refinement</h3>
+            <ul class="tick-list">
+              <li>Convert kitchen recipes into commercial recipes</li>
+              <li>Simplify recipes for production</li>
+              <li>Improve consistency, stability and shelf life</li>
+              <li>Adapt recipes for cans, bottles or larger runs</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Ingredient sourcing</h3>
+            <ul class="tick-list">
+              <li>Juices, concentrates, extracts and flavours</li>
+              <li>Natural colours and sweeteners</li>
+              <li>Botanicals, hydrosols and distillates</li>
+              <li>Supplier documents, specifications and allergens</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Short-run production</h3>
+            <ul class="tick-list">
+              <li>Canning in a range of sizes</li>
+              <li>Bottling in different formats</li>
+              <li>Still and carbonated drinks</li>
+              <li>Small launch runs, trials and development batches</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Compliance support</h3>
+            <ul class="tick-list">
+              <li>Ingredient declarations and allergens</li>
+              <li>Label information and nutrition guidance</li>
+              <li>pH, preservation and shelf-life considerations</li>
+              <li>Technical data sheets and production notes</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Lab testing</h3>
+            <ul class="tick-list">
+              <li>Microbiological testing coordination</li>
+              <li>Shelf-life and stability testing</li>
+              <li>Testing through UKAS-accredited laboratories</li>
+              <li>Results to support safety and product confidence</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <h2>Drinks We've Helped Bring to Life</h2>
-    <ul>
-      <li>Non-alcoholic spirits and RTDs</li>
-      <li>Iced teas and Yerba Mate drinks</li>
-      <li>Functional and adaptogenic beverages</li>
-      <li>Sugar-free soft drinks and botanical mixers</li>
-      <li>Flavoured waters, spiked sodas, and more!</li>
-    </ul>
+    <section class="compact">
+      <div class="container">
+        <div class="highlight">
+          <h2>Need samples quickly?</h2>
+          <p>
+            We can often offer a quick turnaround on short production runs for brands needing samples for events, trade shows, buyer meetings, investor presentations or retailer discussions.
+          </p>
+          <p>
+            This allows you to present a finished, professional product without committing to a large production run too early. Timelines depend on the recipe, packaging, ingredients and testing requirements, but we are used to helping clients move quickly when there is a clear deadline.
+          </p>
+        </div>
+      </div>
+    </section>
 
-    <h2>About Us</h2>
-    <p>
-      With 17 years in the industry and a track record of award-winning products, we offer a friendly, hands-on approach tailored to your needs and budget. Whether launching your first product or growing your range, we’re here to support every step.
-    </p>
+    <section>
+      <div class="container grid-2">
+        <div>
+          <h2>Drinks we can help develop</h2>
+          <p class="section-intro">
+            We work across a wide range of soft drinks, functional drinks, mixers and RTDs.
+          </p>
+          <ul class="tick-list">
+            <li>Premium soft drinks, mixers and tonics</li>
+            <li>Non-alcoholic spirits and RTDs</li>
+            <li>Vodka-based and alcoholic RTDs</li>
+            <li>Iced teas, yerba mate and botanical drinks</li>
+            <li>Functional and adaptogenic beverages</li>
+            <li>Flavoured waters and low-sugar drinks</li>
+            <li>Spiked sodas, sparkling drinks and still drinks</li>
+          </ul>
+        </div>
+        <div>
+          <div class="image-panel">
+            <img src="mid-image.jpg" alt="A gin and tonic style drink being prepared at Lovely Developments" />
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <h2>Ready to Bring Your Drink to Life?</h2>
-    <p>
-      Fill out the form below and let's arrange a <strong>free discovery call</strong> to discuss how we can help.
-    </p>
+    <section>
+      <div class="container grid-2">
+        <div class="card">
+          <h2>Botanical and ingredient research</h2>
+          <p>
+            Alongside drink development, we can support more experimental botanical and ingredient work, including small-scale plant distillation, hydrosol production, botanical extraction trials and flavour exploration from herbs, flowers and plants.
+          </p>
+          <p>
+            This is particularly useful for brands looking to create something distinctive using natural, botanical or field-to-bottle ingredients.
+          </p>
+        </div>
+        <div class="card">
+          <h2>Who we work with</h2>
+          <p>
+            We support start-ups, existing drinks brands, hospitality groups, agencies, wellness companies and businesses looking to launch or improve a beverage product.
+          </p>
+          <p>
+            Some clients come to us with a detailed brief and target specification. Others have a rough idea, a kitchen sample or a flavour they want to bring to life.
+          </p>
+        </div>
+      </div>
+    </section>
 
-    <!-- Contact Form -->
-    <div class="contact">
-      <h2>Contact Us</h2>
-      <form action="https://formsubmit.co/hello@lovelydevelopments.co.uk" method="POST">
-        <label for="name">Name</label><br>
-        <input type="text" id="name" name="name" required><br><br>
+    <section>
+      <div class="container">
+        <h2>How projects usually work</h2>
+        <div class="process">
+          <div class="step">
+            <h3>Initial discussion</h3>
+            <p>We review the product idea, target market, packaging format, production goals and budget.</p>
+          </div>
+          <div class="step">
+            <h3>Scope and proposal</h3>
+            <p>We agree the support needed, such as recipe development, refinement, testing or short-run production.</p>
+          </div>
+          <div class="step">
+            <h3>Recipe and samples</h3>
+            <p>We create or refine the drink, produce samples and make adjustments based on feedback.</p>
+          </div>
+          <div class="step">
+            <h3>Technical review</h3>
+            <p>We consider pH, shelf life, allergens, nutrition, label information and production method.</p>
+          </div>
+          <div class="step">
+            <h3>Trial production</h3>
+            <p>Where required, we produce a short run for market testing, launch stock or buyer samples.</p>
+          </div>
+          <div class="step">
+            <h3>Documentation</h3>
+            <p>We can provide recipe sheets, technical data sheets, production notes and lab results where applicable.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <label for="email">Email Address</label><br>
-        <input type="email" id="email" name="email" placeholder="Email Address" required><br><br>
+    <section>
+      <div class="container grid-2">
+        <div>
+          <h2>Pricing</h2>
+          <p>
+            Every project is different, so pricing depends on the scope of work, complexity of the recipe, ingredients, packaging format, testing requirements and production volume.
+          </p>
+          <p>
+            Typical factors include the number of products or flavours, level of recipe development required, ingredient complexity, whether lab testing is needed, packaging format, production volume and the level of technical documentation required.
+          </p>
+          <p>
+            Once we understand the project, we can provide a clear proposal or quotation.
+          </p>
+        </div>
 
-        <label for="phone">Phone Number</label><br>
-        <input type="tel" id="phone" name="phone" placeholder="Phone Number" required><br><br>
+        <div id="contact" class="contact">
+          <h2>Ready to discuss a drink project?</h2>
+          <p>Tell us a little about what you are working on and we’ll come back to arrange a discovery call.</p>
 
-        <label for="message">Message</label><br>
-        <textarea id="message" name="message" rows="5" required></textarea><br><br>
+          <form action="https://formsubmit.co/hello@lovelydevelopments.co.uk" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required />
 
-        <!-- Dynamic Subject -->
-        <input type="hidden" id="custom-subject" name="_subject" value="">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" autocomplete="organization" />
 
-        <!-- Other Hidden Fields -->
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_replyto" value="email">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_autoresponse" value="Thanks for your message – we've received your enquiry and will be in touch to arrange your discovery call. Looking forward to speaking with you!">
-        <input type="hidden" name="_next" value="https://lovelydevelopments.co.uk/?s=1">
-        <input type="text" name="_honey" style="display:none">
-        <button type="submit">Arrange a Free Discovery Call</button>
-      </form>
-    </div>
-  </section>
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" autocomplete="email" required />
 
-  <!-- Footer -->
+            <label for="phone">Phone number</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" />
+
+            <label for="project-stage">Project stage</label>
+            <select id="project-stage" name="project_stage">
+              <option value="">Please select</option>
+              <option>Early idea / concept</option>
+              <option>Recipe already developed</option>
+              <option>Need samples or a short run</option>
+              <option>Need compliance or technical support</option>
+              <option>Other</option>
+            </select>
+
+            <label for="message">Project details</label>
+            <textarea id="message" name="message" placeholder="Tell us about the drink, packaging format, target volume, deadline and what support you need." required></textarea>
+
+            <input type="hidden" id="custom-subject" name="_subject" value="" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_autoresponse" value="Thanks for your message – we've received your enquiry and will be in touch to arrange a discovery call. Looking forward to speaking with you." />
+            <input type="hidden" name="_next" value="https://lovelydevelopments.co.uk/?s=1" />
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+
+            <button type="submit">Arrange a discovery call</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
   <footer>
-    <p>&copy; 2024 Lovely Developments. All rights reserved.</p>
-    <div style="margin-top: 10px;">
-      <img src="salsa-logo.png" alt="SALSA APPROVED" style="width:150px; height:auto;">
-      <p style="font-size: 14px;">Proudly SALSA-Approved for Safe and Local Supplier Assurance.</p>
+    <div class="container footer-grid">
+      <div>
+        <strong>Lovely Developments LTD</strong>
+        <p>
+          The Old Sawmill, Home Farm, Barrow Court Lane, Bristol BS48 3RW<br />
+          <a href="mailto:hello@lovelydevelopments.co.uk">hello@lovelydevelopments.co.uk</a> · <a href="tel:+447542517135">07542 517135</a>
+        </p>
+        <p class="small">&copy; 2026 Lovely Developments LTD. All rights reserved.</p>
+      </div>
+      <div class="salsa-block">
+        <img src="salsa-logo.png" alt="SALSA Approved logo" />
+        <p class="small">Proudly SALSA-approved for Safe and Local Supplier Approval.</p>
+      </div>
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      // Thank you pop-up
       const queryParams = new URLSearchParams(window.location.search);
       if (queryParams.get("s") === "1") {
         const popup = document.getElementById("thank-you-popup");
@@ -230,16 +716,19 @@
         }, 5000);
       }
 
-      // Set subject line dynamically
       const form = document.querySelector("form");
       const nameField = document.getElementById("name");
+      const companyField = document.getElementById("company");
       const subjectField = document.getElementById("custom-subject");
 
       form.addEventListener("submit", function () {
         const name = nameField.value.trim() || "New Enquiry";
+        const company = companyField.value.trim();
         const today = new Date();
         const formattedDate = today.toISOString().split("T")[0];
-        subjectField.value = `New Enquiry from: ${name} – ${formattedDate}`;
+        subjectField.value = company
+          ? `New Enquiry from: ${name} at ${company} – ${formattedDate}`
+          : `New Enquiry from: ${name} – ${formattedDate}`;
       });
     });
   </script>
